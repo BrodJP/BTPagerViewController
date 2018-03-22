@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pager View Controller-->
+        <scene sceneID="qD3-5i-wBl">
+            <objects>
+                <viewController storyboardIdentifier="BTPagerViewController" id="RaI-H3-ObD" customClass="BTPagerViewController" customModule="Content_Tabs_Slide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k3R-Is-RiC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlL-63-dbl">
+                                <rect key="frame" x="0.0" y="140" width="375" height="527"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYO-fD-fSQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="120"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PTU-RZ-KUq">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BG8-jo-TFv">
+                                        <rect key="frame" x="8" y="107" width="359" height="5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="PTU-RZ-KUq" secondAttribute="trailing" id="1aT-MT-7lA"/>
+                                    <constraint firstItem="PTU-RZ-KUq" firstAttribute="top" secondItem="zYO-fD-fSQ" secondAttribute="top" id="3oZ-Rg-GKS"/>
+                                    <constraint firstAttribute="bottom" secondItem="PTU-RZ-KUq" secondAttribute="bottom" id="lGq-BZ-nYp"/>
+                                    <constraint firstItem="PTU-RZ-KUq" firstAttribute="leading" secondItem="zYO-fD-fSQ" secondAttribute="leading" id="nIB-F0-3bX"/>
+                                    <constraint firstAttribute="height" constant="120" id="qRS-20-Cas"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zYO-fD-fSQ" firstAttribute="leading" secondItem="ZDl-Ra-xsL" secondAttribute="leading" id="AdZ-he-QLu"/>
+                            <constraint firstItem="xlL-63-dbl" firstAttribute="leading" secondItem="ZDl-Ra-xsL" secondAttribute="leading" id="BC2-Mi-Glw"/>
+                            <constraint firstItem="zYO-fD-fSQ" firstAttribute="trailing" secondItem="ZDl-Ra-xsL" secondAttribute="trailing" id="HI7-Se-vlp"/>
+                            <constraint firstItem="ZDl-Ra-xsL" firstAttribute="bottom" secondItem="xlL-63-dbl" secondAttribute="bottom" id="Mhv-Rw-AIs"/>
+                            <constraint firstItem="ZDl-Ra-xsL" firstAttribute="trailing" secondItem="xlL-63-dbl" secondAttribute="trailing" id="Yca-B3-CZ2"/>
+                            <constraint firstItem="xlL-63-dbl" firstAttribute="top" secondItem="zYO-fD-fSQ" secondAttribute="bottom" id="ZIr-rG-LjR"/>
+                            <constraint firstItem="zYO-fD-fSQ" firstAttribute="top" secondItem="ZDl-Ra-xsL" secondAttribute="top" id="ecZ-yc-HqB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZDl-Ra-xsL"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="xlL-63-dbl" id="vTk-I3-4hX"/>
+                        <outlet property="selectedTabIndicatorView" destination="BG8-jo-TFv" id="OaR-G9-Pam"/>
+                        <outlet property="tabContainerView" destination="zYO-fD-fSQ" id="aDD-q8-MUA"/>
+                        <outlet property="tabContainerViewHeightConstraint" destination="qRS-20-Cas" id="CIJ-PA-gKk"/>
+                        <outlet property="tabStackView" destination="PTU-RZ-KUq" id="5qi-Q2-XKc"/>
+                        <outlet property="tabStackViewBottomSpaceToContainer" destination="lGq-BZ-nYp" id="chn-ZX-4My"/>
+                        <outlet property="tabStackViewLeftSpaceToContainer" destination="nIB-F0-3bX" id="URn-0J-Efn"/>
+                        <outlet property="tabStackViewRightSpaceToConatiner" destination="1aT-MT-7lA" id="ZiU-VB-wc9"/>
+                        <outlet property="tabStackViewTopSpaceToContainer" destination="3oZ-Rg-GKS" id="Kzt-Hu-gXS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIc-Ln-wW6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>

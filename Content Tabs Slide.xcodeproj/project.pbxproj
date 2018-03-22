@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9315F4552062C191009C63E1 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9315F4542062C191009C63E1 /* UIColor+CustomColors.swift */; };
+		9315F45B2062C67A009C63E1 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9315F45A2062C67A009C63E1 /* RoundedView.swift */; };
+		9315F45D2062CAB9009C63E1 /* RoundedViewWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9315F45C2062CAB9009C63E1 /* RoundedViewWithShadow.swift */; };
+		9315F460206303A5009C63E1 /* BTPagerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9315F45F206303A5009C63E1 /* BTPagerViewController.storyboard */; };
+		934E4C512061ADEA0051553C /* BasicTabElementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934E4C502061ADEA0051553C /* BasicTabElementViewController.swift */; };
 		9388D63A206070CC0060EA6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388D639206070CC0060EA6A /* AppDelegate.swift */; };
-		9388D63C206070CC0060EA6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388D63B206070CC0060EA6A /* ViewController.swift */; };
+		9388D63C206070CC0060EA6A /* BTPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388D63B206070CC0060EA6A /* BTPagerViewController.swift */; };
 		9388D63F206070CC0060EA6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9388D63D206070CC0060EA6A /* Main.storyboard */; };
 		9388D641206070CC0060EA6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9388D640206070CC0060EA6A /* Assets.xcassets */; };
 		9388D644206070CC0060EA6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9388D642206070CC0060EA6A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9315F4542062C191009C63E1 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
+		9315F45A2062C67A009C63E1 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		9315F45C2062CAB9009C63E1 /* RoundedViewWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewWithShadow.swift; sourceTree = "<group>"; };
+		9315F45F206303A5009C63E1 /* BTPagerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BTPagerViewController.storyboard; sourceTree = "<group>"; };
+		934E4C502061ADEA0051553C /* BasicTabElementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTabElementViewController.swift; sourceTree = "<group>"; };
 		9388D636206070CB0060EA6A /* Content Tabs Slide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Content Tabs Slide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9388D639206070CC0060EA6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9388D63B206070CC0060EA6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9388D63B206070CC0060EA6A /* BTPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTPagerViewController.swift; sourceTree = "<group>"; };
 		9388D63E206070CC0060EA6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9388D640206070CC0060EA6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9388D643206070CC0060EA6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9315F4592062C66A009C63E1 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				9315F45A2062C67A009C63E1 /* RoundedView.swift */,
+				9315F45C2062CAB9009C63E1 /* RoundedViewWithShadow.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		9315F45E20630373009C63E1 /* PodFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9388D63B206070CC0060EA6A /* BTPagerViewController.swift */,
+				9315F45F206303A5009C63E1 /* BTPagerViewController.storyboard */,
+			);
+			path = PodFiles;
+			sourceTree = "<group>";
+		};
 		9388D62D206070CB0060EA6A = {
 			isa = PBXGroup;
 			children = (
@@ -55,13 +83,24 @@
 			isa = PBXGroup;
 			children = (
 				9388D639206070CC0060EA6A /* AppDelegate.swift */,
-				9388D63B206070CC0060EA6A /* ViewController.swift */,
+				934E4C502061ADEA0051553C /* BasicTabElementViewController.swift */,
 				9388D63D206070CC0060EA6A /* Main.storyboard */,
-				9388D640206070CC0060EA6A /* Assets.xcassets */,
 				9388D642206070CC0060EA6A /* LaunchScreen.storyboard */,
+				9388D640206070CC0060EA6A /* Assets.xcassets */,
 				9388D645206070CC0060EA6A /* Info.plist */,
+				9315F45E20630373009C63E1 /* PodFiles */,
+				9315F4592062C66A009C63E1 /* CustomViews */,
+				9388D64B206073E40060EA6A /* Extensions */,
 			);
 			path = "Content Tabs Slide";
+			sourceTree = "<group>";
+		};
+		9388D64B206073E40060EA6A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9315F4542062C191009C63E1 /* UIColor+CustomColors.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9388D644206070CC0060EA6A /* LaunchScreen.storyboard in Resources */,
+				9315F460206303A5009C63E1 /* BTPagerViewController.storyboard in Resources */,
 				9388D641206070CC0060EA6A /* Assets.xcassets in Resources */,
 				9388D63F206070CC0060EA6A /* Main.storyboard in Resources */,
 			);
@@ -136,7 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9388D63C206070CC0060EA6A /* ViewController.swift in Sources */,
+				934E4C512061ADEA0051553C /* BasicTabElementViewController.swift in Sources */,
+				9388D63C206070CC0060EA6A /* BTPagerViewController.swift in Sources */,
+				9315F45D2062CAB9009C63E1 /* RoundedViewWithShadow.swift in Sources */,
+				9315F4552062C191009C63E1 /* UIColor+CustomColors.swift in Sources */,
+				9315F45B2062C67A009C63E1 /* RoundedView.swift in Sources */,
 				9388D63A206070CC0060EA6A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AK2ZP4ZDR4;
 				INFOPLIST_FILE = "Content Tabs Slide/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.applaudostidos.Content-Tabs-Slide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AK2ZP4ZDR4;
 				INFOPLIST_FILE = "Content Tabs Slide/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.applaudostidos.Content-Tabs-Slide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
