@@ -158,7 +158,7 @@ class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    var selectedIndicatorColor = UIColor.lightBlue {
+    var selectedIndicatorColor = UIColor.blue {
         didSet {
             guard isViewLoaded else {
                 return
