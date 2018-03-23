@@ -6,9 +6,9 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "BrodJP" => "bjhp1990@gmail.com" }
   s.platform     = :ios, "9.0"
-  s.source       = { :git => "https://github.com/BrodJP/BTPagerViewController.git", :tag => "1.0.3" }
+  s.source       = { :git => "https://github.com/BrodJP/BTPagerViewController.git", :tag => "#{s.version}" }
   s.source_files = "Content Tabs Slide/PodFiles/*.swift"
-  s.resources    = "Content Tabs Slide/PodFiles/*.{png,bundle,xib,nib,storyboard}"
+  s.resources    = "Content Tabs Slide/PodFiles/*.{storyboard}"
   s.requires_arc = true
   s.swift_version = "4.0"
 end
