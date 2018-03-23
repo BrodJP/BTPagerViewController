@@ -1,8 +1,10 @@
 # BTPagerViewController
 
+![](https://gfycat.com/IndolentOnlyAfricangoldencat)
+
 ## Installation with CocoaPods
 
-[CocoaPods](http://cocoapods.org) CocoaPods is a dependency manager for Swift and Objective-C Cocoa projects. It has over 44 thousand libraries and is used in over 3 million apps. You can install it with the following command:
+[CocoaPods](http://cocoapods.org) is a dependency manager for Swift and Objective-C Cocoa projects. It has over 44 thousand libraries and is used in over 3 million apps. You can install it with the following command:
 
 ```bash
 $ gem install cocoapods
