@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TabElement {
+public protocol TabElement {
     var viewController: UIViewController { get }
     var tabView: UIView? { get }
     
@@ -16,7 +16,7 @@ protocol TabElement {
     func didBecomeUnselected()
 }
 
-class BTPagerViewController: UIViewController, UIScrollViewDelegate {
+public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
 
     private struct MoveToTabRequest {
         let index: Int
@@ -176,13 +176,13 @@ class BTPagerViewController: UIViewController, UIScrollViewDelegate {
     
     // MARK: Lyfecicle
     
-    override func viewDidLayoutSubviews() {
+    override public func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateControllerPositions()
         updateTabIndicator()
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         
@@ -192,7 +192,7 @@ class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
 
-    override func viewDidAppear(_ animated: Bool) {
+    override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         if let request = initialMoveRequest {
@@ -201,7 +201,7 @@ class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
@@ -341,6 +341,10 @@ class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
         
         scrollView.contentSize = contentSize
+        
+        if let selectedTabIndex = selectedTabIndex {
+            moveToTabElementAt(index: selectedTabIndex, animated: false)
+        }
     }
     
     private func updateTabIndicator() {
@@ -466,16 +470,16 @@ class BTPagerViewController: UIViewController, UIScrollViewDelegate {
     
     // MARK: ScollViewDelegate
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let newTabSelectorOffset = selectedTabOffsetFrom(scrollView: scrollView)
         updateTabSelectorOffset(with: newTabSelectorOffset)
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         updateCurrentSelectedTabIfNeccesary()
     }
     
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         updateCurrentSelectedTabIfNeccesary()
     }
 }
