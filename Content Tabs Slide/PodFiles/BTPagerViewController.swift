@@ -23,7 +23,7 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         let animated: Bool
     }
     
-    class func fromStoryboard() -> BTPagerViewController {
+    public class func fromStoryboard() -> BTPagerViewController {
         
         let bundle = Bundle(for: BTPagerViewController.self)
         let storyboard = UIStoryboard(name: "BTPagerViewController", bundle: bundle)
@@ -48,7 +48,7 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
 
     // Mark: Public Properties
 
-    var tabElements: [TabElement]? {
+    public var tabElements: [TabElement]? {
         didSet {
             guard isViewLoaded else {
                 return
@@ -68,7 +68,7 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    private(set) var selectedTabIndex: Int? {
+    public private(set) var selectedTabIndex: Int? {
         didSet {
             guard isViewLoaded else {
                 return
@@ -79,14 +79,14 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    var visibleTab: TabElement? {
+    public var visibleTab: TabElement? {
         guard let currentIndex = selectedTabIndex else {
             return nil
         }
         return tabElements?[currentIndex]
     }
     
-    var tabHeaderContainerHeight: CGFloat = 80.0 {
+    public var tabHeaderContainerHeight: CGFloat = 80.0 {
         didSet {
             guard isViewLoaded else {
                 return
@@ -95,7 +95,7 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    var selectedIndicatorHeight = CGFloat(5.0) {
+    public var selectedIndicatorHeight = CGFloat(5.0) {
         didSet {
             guard isViewLoaded else {
                 return
@@ -104,7 +104,7 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    var roundedSelectedIndicator = true {
+    public var roundedSelectedIndicator = true {
         didSet {
             guard isViewLoaded else {
                 return
@@ -113,7 +113,7 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    var tabElementSpacing: CGFloat = 32.0 {
+    public var tabElementSpacing: CGFloat = 32.0 {
         didSet {
             guard isViewLoaded else {
                 return
@@ -122,7 +122,7 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    var tabHeaderViewInsets = UIEdgeInsets(top: 30.0, left: 32.0, bottom: 0.0, right: 32.0) {
+    public var tabHeaderViewInsets = UIEdgeInsets(top: 30.0, left: 32.0, bottom: 0.0, right: 32.0) {
         didSet {
             guard isViewLoaded else {
                 return
@@ -131,7 +131,7 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    var selectedIndicatorOverallLeftSpace: CGFloat = 16.0 {
+    public var selectedIndicatorOverallLeftSpace: CGFloat = 16.0 {
         didSet {
             guard isViewLoaded else {
                 return
@@ -140,7 +140,7 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    var selectedIndicatorOverallRightSpace: CGFloat = 16.0 {
+    public var selectedIndicatorOverallRightSpace: CGFloat = 16.0 {
         didSet {
             guard isViewLoaded else {
                 return
@@ -149,7 +149,7 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    var selectedIndicatorInsets = UIEdgeInsets(top: 8.0, left: 0.0, bottom: 8.0, right: 0.0) {
+    public var selectedIndicatorInsets = UIEdgeInsets(top: 8.0, left: 0.0, bottom: 8.0, right: 0.0) {
         didSet {
             guard isViewLoaded else {
                 return
@@ -158,7 +158,7 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    var selectedIndicatorColor = UIColor.blue {
+    public var selectedIndicatorColor = UIColor.blue {
         didSet {
             guard isViewLoaded else {
                 return
@@ -208,7 +208,7 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
     
     // MARK: Public Functions
     
-    func moveToTabElementAt(index: Int, animated: Bool) {
+    public func moveToTabElementAt(index: Int, animated: Bool) {
         
         guard isViewLoaded else {
             initialMoveRequest = MoveToTabRequest(index: index, animated: animated)
@@ -222,7 +222,7 @@ public class BTPagerViewController: UIViewController, UIScrollViewDelegate {
         moveTo(tabAtIndex: index, animated: animated)
     }
     
-    func indexOf(tabElement: TabElement) -> Int? {
+    public func indexOf(tabElement: TabElement) -> Int? {
         
         guard let tabElements = tabElements else {
             return nil
