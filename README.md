@@ -1,6 +1,6 @@
 # BTPagerViewController
 
-![](https://makeagif.com/i/MGffPb)
+![](https://media.giphy.com/media/9r6GWovWd9JRQVRa5X/giphy.gif)
 
 ## Installation with CocoaPods
 
