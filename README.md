@@ -15,6 +15,7 @@ $ gem install cocoapods
 To integrate BTPagerViewController into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
+use_frameworks!
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
