@@ -19,7 +19,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 target 'TargetName' do
-pod 'BTPagerViewController', '~> 3.0'
+pod 'BTPagerViewController', '~> 1.0.3'
 end
 ```
 
